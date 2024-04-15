@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Series de Televisión</title>
+    <style>
+        .nombre-serie {
+            color: rgb(8, 117, 219);
+            cursor: pointer; /* Hace que el nombre de la serie parezca clickeable */
+        }
+        .nombre-serie:hover {
+            text-decoration: underline; /* Agrega un subrayado al pasar el mouse para mejorar la interactividad */
+        }
+        #serie-detail {
+            display: none; /* Oculta inicialmente el detalle de la serie */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-primary">     
+        <span class="navbar-brand mb-0 h1 text-white">
+            <i class="fa fa-television" aria-hidden="true"></i>
+            TV Series
+        </span>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- La tabla dentro de un card-body para mantener el estilo de Bootstrap -->
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Channel</th>
+                                    <th>Seasons</th>
+                                </tr>
+                            </thead>
+                            <tbody id="series-table">
+                                <!-- Las filas de la tabla se llenarán aquí usando JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Contenedor para el detalle de la serie -->
+                <div id="serie-detail" class="card">
+                    <!-- El contenido del card se llenará dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
